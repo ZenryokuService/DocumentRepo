@@ -215,3 +215,5 @@ git push
 ```
 その実行結果が下のようになります。※Githubとコマンプロンプトを重ねてキャプチャしました。
 ![AfterPush](./img/AfterPush.png)
+
+## コマンドのみでコミット
