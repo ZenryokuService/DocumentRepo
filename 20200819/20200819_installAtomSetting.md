@@ -201,6 +201,9 @@ public static void main(String[] args) {
 すると、下のエラーが出ました。
 ![error](./img/errorMes.png)
 
+ちなみにうまくいった場合は、下のようにAtom側からPUSH出来ました。
+![Push](./img/pushAtom.png)
+
 ### GitError
 上のエラーに対する対応を行います。結論から言うとユーザー情報が設定されていないので、それを設定します。コマンドは以下の通り
 ```
@@ -222,4 +225,4 @@ git push
 3. 「git commit -m "メッセージ"」コミットコメントをつける、上のものと使い分けるようにする
 4. コミットしたらあとはPUSH
 
-![FinishCommit](./img/commandCommit.png) 
+![FinishCommit](./img/commandCommit.png)
