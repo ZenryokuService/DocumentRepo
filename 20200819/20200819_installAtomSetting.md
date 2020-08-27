@@ -181,7 +181,9 @@ public static void main(String[] args) {
 このPC全体で使用するのならシステム環境変数に設定します。
 2. Github(ウェブサイト)に作成したリポジトリ(リモートリポジトリ)のURLをコピーして、ローカルリポジトリへ(自分のPCへ)クローンします。
   * ローカルリポジトリを配置するディレクトリに移動
-    ``` cd D:\privateDocs\MyDoc```
+    ```
+    cd D:\privateDocs\MyDoc
+    ```
   * git clone リモートリポジトリのURL
   ![cloneGit](./img/cloneRepo.png)
 3. リポジトリをクローン出来たか確認
@@ -194,4 +196,22 @@ public static void main(String[] args) {
 ![Staged](./img/stageFiles.png)
 これらを選択、みぎっクリックすると下のような画面が見れます。
 ![stageControll](./img/stageControll.png)
-そして、Stageを選択
+そして、Stageを選択、コミットします。
+![commit](./img/commitFromAtom.png)
+すると、下のエラーが出ました。
+![error](./img/errorMes.png)
+
+### GitError
+上のエラーに対する対応を行います。結論から言うとユーザー情報が設定されていないので、それを設定します。コマンドは以下の通り
+```
+git --global user.email "自分のEメール"
+git --global user.name "Githubのユーザー名"
+```
+![githubGlobal](./img/gitGlobalSetting.png)
+
+これで、コミットができました。しかし、これではローカルリポジトリに登録されただけなので、PUSHしてリモートリポジトリへ登録してやる必要があります。
+```
+git push
+```
+その実行結果が下のようになります。※Githubとコマンプロンプトを重ねてキャプチャしました。
+![AfterPush](./img/AfterPush.png)
