@@ -221,4 +221,5 @@ git push
 2. 「git commit」で全体のコミット　※今回はファイル一つなので後ろにファイルのパスをつける
 3. 「git commit -m "メッセージ"」コミットコメントをつける、上のものと使い分けるようにする
 4. コミットしたらあとはPUSH
- 
+
+![FinishCommit](./img/commandCommit.png) 
