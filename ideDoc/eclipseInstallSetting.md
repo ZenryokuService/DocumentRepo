@@ -2,6 +2,7 @@
 * [Eclipseのインストール](#install-eclipse)
 * [Eclipseの起動](#execute-eclipse)
 * [eclipseの設定](#setting-eclipse)
+* [JUNITの設定](#setting-junit)
 
 ## Install Eclipse
 [MergeDoc](https://mergedoc.osdn.jp/)からダウンロードします。
@@ -157,3 +158,20 @@ Githubのユーザーとパスワードを入力します。
 
 3. パッケージを作成し、その配下にJavaソースを作成、とりあえずはHello Worldを実行して問題なくJavaを起動できることを確認
 ![Reuslt](./img/ResultHelloWorld.png)
+
+## Setting Junit
+JUNITの設定を行います、単純にjunit.jarをビルドパスにつなげるだけです。
+しかし、ライブラリがあるのでそれを設定するほうが楽です。
+1. **プロジェクトを右クリック -> プロパティ、もしくはAlt + Enterでプロジェクトの設定を開きます。**
+![projectProperty](./img/projectProperty.png)
+
+2. ライブラリの追加をクリック
+![AddLibrary](./img/elipseAddLibrary.png)
+
+3. JUnitを選択(選択後の画像です)
+![elipseJunit5](./img/elipseJunit5.png)
+
+4. JUnit追加後
+![After](./img/elipseAfterJunit.png)
+プロジェクトにJUnitが追加されています。
+![After2](./img/elipseAfterJunit2.png)
