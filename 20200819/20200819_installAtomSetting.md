@@ -140,6 +140,9 @@ public static void main(String[] args) {
 15. ~絵文字~ 調査中
 :smile:
 
+## Check encording
+**ctrl + shift + U**を押下して使用する文字コードを選択する
+
 ## CreateRepos
 参照＝[Atomのリファレンスページ](https://flight-manual.atom.io)
 
