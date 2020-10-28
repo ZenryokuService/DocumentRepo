@@ -1,189 +1,145 @@
-# 第2章：データの宣言と使用
-## ＜練習問題２－１＞
-Javaの基本データ型として正しくないものは次のどれですか。２つ選択してください。
-1. double
-2. char
-3. string
-4. short
-5. Boolean
-
-## ＜練習問題２－２＞
+# 第3章：演算子と条件文(分岐文)
+## ＜練習問題３－１＞
 次のコードがあります。
 ```
 public class Test {
   pblic static void main(String[] args) {
-    byte a = 100;
-    short b = 50000;
-    int c = 10000000;
-    long d = 123456789L;
+    int a = 2;
+    short b = 4;
+    System.out.print("10 + 3 * 2" + " ");
+    System.out.print(++a * b++);
   }
 }
 ```
 コンパイルした結果として正しいものは次のどれですか。１つ選択してください。
 
-1. コンパイルに成功する
-2. ３行目に問題があるためコンパイルエラーとなる
-2. ４行目に問題があるためコンパイルエラーとなる
-2. ５行目に問題があるためコンパイルエラーとなる
-2. ６行目に問題があるためコンパイルエラーとなる
-2. 複数行に問題があるためコンパイルエラーとなる
+1. コンパイルエラー
+2. 26 8
+2. 26 15
+2. 16 8
+2. 16 12
+2. 16 15
 
-## ＜練習問題２－３＞
-変数宣言として正しいものは次のどれですか。
-
-1. boolean b = 0;
-2. float f = 3.14;
-3. double d = 0.0;
-4. char c = "\u0078";
-
-## ＜練習問題２－４＞
-変数宣言として正しくないものは次のどれですか。４つ選択してください。
-
-1. char c1 = 'AB';
-2. char c1 = "AB";
-3. char c1 = '\u0041';
-4. char c1 = '\t';
-5. char c1 = '1';
-6. char c1 = "w";
-
-## ＜練習問題２－５＞
-次の基本データ型のうち整数を扱うものはどれですか。４つ選択してください。
-1. long
-2. boolean
-3. int
-4. float
-5. byte
-6. short
-7. double
-
-## ＜練習問題２－６＞
-定数を宣言する際の説明として正しいものは次のどれですか。１つ選択してください。
-
-1. Javaでは定数を利用できない
-2. constキーワードを移用する
-3. constantキーワードを使用する
-4. finalキーワードを使用する
-
-## ＜練習問題２－７＞
-変数名として有効なものは次のどれですか。３つ選択してください。
-
-1. Employee$
-2. member-id
-3. account#
-4. _home
-5. emp99
-
-## ＜練習問題２－８＞
-配列の宣言として有効なものは次のどれですか。３つ選択してください。
-
-1. int[] a = {1, 2, 3};
-2. int []a = new int[3];
-3. int[] a;
-   a = new int[3];
-4. int a[] = new int(3);
-5. int a[3] = new int[];
-
-## ＜練習問題２－９＞
+## ＜練習問題３－２＞
 次のコードがあります。
 ```
-public class Test {
-  public static void main(String[] args) {
-    char arry1[] = {'a', 'b', 'c', 'd', 'e'};
-    char arry2[] = new char[10];
-    arry2[0] = 'f';
-    arry2[1] = 'g';
-    System.out.println( arry1.length + " " + arry2.length);
+int n1 = 22, n2 = 67, n3 = 0, n4 = 47, n5 = 17, n6 = 50;
+boolean b = true;
+```
+実行結果がtrueとなるコードはどれですか。
+
+1. (n2 > n6) | b0
+2. (b) && (n1 <= n4)
+3. (n2 < n6) && (n4 >= n1)
+4. (n3 < n5) || (n2 M= n1)
+5. (n1 < n3) && (n5 != n4)
+6. !(n1 < n3)  && (n5 != n4)
+
+## ＜練習問題３－３＞
+次の変数宣言があります。
+
+char x = 5;
+
+1. if (x == 5) {}
+2. if (x = 5) {}
+3. if (x == '') {}
+4. if (x == 'x') {}
+
+## ＜練習問題３－４＞
+次のコードがあります。
+```
+class Test {
+  public void main(String[] args) {
+    int x = 5;
+    int y = 10;
+    String str = (z > y ? "hello" : "bye");
+    System.out.println(str);
   }
 }
 ```
 コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
+
 1. コンパイルエラー
 2. 実行時エラー
-3. 5 2
-4. 5 10
+3. hello
+4. bye0
 5. 何も表示されない
 
-## ＜練習問題２－１０＞
-次のコードがあります。
-```
-class Array {
-  public static void main(String[] args) {
-    int[] i = new int[3];
-    boolean[] b = new boolean[3];
-    System.out.println("i[0] = " + i[0] + "b[0] = " + b[0]);
-  }
-}
-```
-
-コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
-
-1. 5行目でコンパイルエラーになる
-2. コンパイルはできるが、実行時エラーが発生する
-3. i[0] = 0 b[0] = falseが出力される
-4. i[0] = 0 b[0] = trueが出力される
-
-## ＜練習問題２－１１＞
+## ＜練習問題３－５＞
 次のコードがあります。
 ```
 class Test {
-  public static void main(String[] args) {
-    System.out.println(args[1] + args[2]);
+  public void main(String[] args) {
+    boolean b = false;
+    int i = 0;
+    if (i++ > 5 && !b)
+      i++;
+    if (i > 0)
+      b = true;
+
+    System.out.println("b=" + b + " i=" + i);
   }
 }
-```
-実行する際は次とします。
-```
-java Test 1 2
-```
-
-コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
-
-1. コンパイルエラー
-2. コンパイルはできるが、実行時エラー発生する
-3. 実行結果は3と出力する
-4. 実行結果は12と出力する
-5. 実行結果は１２と出力する
-
-## ＜練習問題２－１２＞
-次のコードがあります。
-```
-class Test {
-  public static void main(String[] args) {
-    System.out.println(args[0] + args[1]);
-  }
-}
-```
-実行する際は次とします。
-```
-java Test 1 2
-```
-
-コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
-
-1. コンパイルエラー
-2. コンパイルはできるが、実行時エラー発生する
-3. 実行結果は3と出力する
-4. 実行結果は12と出力する
-5. 実行結果は１２と出力する
-
-## ＜練習問題２－１３＞
-次のコードがあります。
-```
-class Test {
-  public static void main(String[] args) {
-    System.out.println(args[1]);
-  }
-}
-```
-
-実行する際は次とします。
-```
-java Test args[1] = 4
 ```
 コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
 
 1. コンパイルエラー
-2. コンパイルはできるが、実行時エラー発生する
-3. 実行結果は3と出力する
-4. 実行結果は12と出力する
-5. 実行結果は１２と出力する
+2. 実行時エラー
+3. b = true i=2
+4. b=false i=2
+5. b=false i=0
+6. b=true i=1
+
+## ＜練習問題３－６＞
+次のコードがあります。
+```
+class Test {
+  public void main(String[] args) {
+    boolean b = true;
+    if (b = false) {
+      System.out.println(b);
+      System.out.println(b);
+    }
+  }
+}
+```
+コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
+
+1. コンパイルエラー
+2. 実行時エラー
+3. true
+4. false
+5. true
+   true
+6. false
+   false
+
+## ＜練習問題３－７＞
+次のコードがあります。
+```
+class Test {
+  public void main(String[] args) {
+    String s = "100";
+    s = s + 200;
+    System.out.println(s);
+  }
+}
+```
+コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
+
+1. 200
+2. 100
+3. 300
+4. 1002000
+5. コンパイルエラー
+6. 実行時エラー
+
+## ＜練習問題３－８＞
+
+## ＜練習問題３－１０＞
+
+## ＜練習問題３－１１＞
+
+## ＜練習問題３－１２＞
+
+## ＜練習問題３－１３＞
