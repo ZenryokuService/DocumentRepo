@@ -135,11 +135,131 @@ class Test {
 6. 実行時エラー
 
 ## ＜練習問題３－８＞
+次のコードがあります。
+```
+class Test {
+  public void main(String[] args) {
+    String str = "Hello";
+    String str2 = "Bye";
+    str += str2;
+    str -= str2;
+
+    if (str == str2) {
+      System.out.println("str = str2");
+    } else {
+      System.out.println("str != str2");
+    }
+  }
+}
+```
+コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
+
+1. str = str2
+2. str != str2
+5. コンパイルエラー
+6. 何も表示されない
+
+## ＜練習問題３－９＞
+次のコードがあります。
+```
+class Test {
+  public void main(String[] args) {
+    int x = 5;
+    boolean b1 = true;
+    boolean b2 = false;
+
+    if ((x == 4) != b2) {
+      System.out.print("1 ");
+      System.out.print("2 ");
+    }
+    if ((b2 = true) && b1) {
+      System.out.print("3 ");
+    }
+  }
+}
+```
+コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
+
+1. 2
+2. 3
+3. 1 2
+4. 1 2 3
+5. コンパイルエラー
+6. 実行時エラー
 
 ## ＜練習問題３－１０＞
+次のコードがあります。
+```
+class Test {
+  public void main(String[] args) {
+    int  i = 0;
+    switch(i) {
+      default: System.out.print('default');
+      case 10: System.out.print('case10');
+      case 20: System.out.print('case20');
+      case 30: System.out.print('case30');
+    }
+  }
+}
+```
+コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
 
+1. コンパイルエラー
+2. 実行時エラー
+3. default case10 case20 case 30
+4. default
+5. 何も表示されない
 ## ＜練習問題３－１１＞
+次のコードがあります。
+```
+class Test {
+  public void main(String[] args) {
+    int  i = 0;
+    switch(i) {
+      case 10: System.out.print("case10");
+      case 20: System.out.print("case20");
+      case 30: System.out.print("case30");
+      default: System.out.print("default");
+    }
+  }
+}
+```
+コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
+
+1. コンパイルエラー
+2. 実行時エラー
+3. default case10 case20 case 30
+4. default
+5. 何も表示されない
+
 
 ## ＜練習問題３－１２＞
+次のコードがあります。
+```
+class Test {
+  public void main(String[] args) {
+    String str = "abcdefghijklmn";
+    char c = str.charAt(7);
+    switch(c) {
+      case 'f':
+        System.out.print("f");
+        break;
+      case 'g':
+        System.out.print("g");
+        break;
+      case 'h':
+        System.out.print("h");        
+        break;
+      case 'i': System.out.print("i");
+    }
+  }
+}
+```
+コンパイル、実行した結果として正しいものは次のどれですか。１つ選択してください。
 
-## ＜練習問題３－１３＞
+1. f
+2. g
+3. h
+4. i
+5. コンパイルエラー
+6. 実行時エラー
