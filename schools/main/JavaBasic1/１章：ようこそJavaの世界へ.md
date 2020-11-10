@@ -28,6 +28,7 @@ java FirstCls
 #### 外観を変更する
 1. **ウィンドウ→設定→一般→外観→色とテーマ**の順にクリック
 2. ここで好きなテーマを選択する
+※大半の人がデフォルトで使用している
 ![色・テーマの設定](./img1/themeSetting.png)
 
 #### 文字コードの変更(確認)
@@ -75,7 +76,10 @@ public static void main(String[] args) {
 }
 }
 ```
-### 1.2.2 プログラムの書き始め方
+### 1.2.2 プログラムの書き方
+Java言語(C言語も)の場合は、メインメソッドが起動しますので、クラスの中にメインメソッドを作成する
+> Javaはメインメソッドが動く
+
 1. どのようなプログラムを作りたいかを考えます。
 2. プログラムの名前を決めます。
 3. 「クラス名.java」という名前でファイルを作ります。
@@ -111,7 +115,7 @@ public static void main(String[] args) {
 上のコードは、[System](https://docs.oracle.com/javase/jp/8/docs/api/java/lang/System.html)クラスから変数「out」を呼び出し、メソッド「println()」を呼び出している
 
 #### 練習：SecondProgram
-写経してください。以下のコードを書いて動かしてください。
+写してください。以下のコードを書いて動かしてください。
 
 ```
 public class SecondCls {
@@ -209,6 +213,8 @@ public void methodName();
 public class ClassName {
 }
 ```
+
+6. 演算子で使用している文字、予約語は変数名(クラス名)として使用できない
 
 **==計算処理==**
 ```
