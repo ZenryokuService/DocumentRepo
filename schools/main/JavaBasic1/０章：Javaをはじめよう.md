@@ -45,8 +45,3 @@ Xylophone.java：67行目にエラーが出たとき
 new AudioClip(Xylophone.class.getResource("audio/Note1.wav").toString());
 ```
 の「audio/Note1.wav」を「/audio/Note1.wav」に修正してみる
-
-## ロードマップ
-1. Javaの文法
-2. オブジェクト指向
-3. APIの活用
