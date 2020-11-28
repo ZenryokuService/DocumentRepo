@@ -1,0 +1,51 @@
+引数なし、返り値なしのテストも行いましょう。
+
+テスト仕様はいつ決めた？ー＞テスト実行時に決定している。
+
+設計工程の入れ方について、
+
+＜メモ＞
+Getter / Setterの実装が必要だ。
+
+ミロ：https://miro.com/
+https://awwapp.com/#
+↑が無料で使えるようだ。
+
+
+学びの部分は必要なので、各テストケースの修正などは仕方ないのか？
+
+簡単なクラス図があり、共有できると実装がやりやすいかな？
+
+１７：４５分
+
+GitHub Actionsでは、実行する処理とその処理を実行する条件を定義したものを「Workflow（ワークフロー）」と呼ぶ。
+ワークフローはYAML形式
+
+
+KPT
+YWT
+FDW
+
+
+name: Test -> ワークフロー名 
+
+on: [push] -> 
+
+jobs:
+  test:
+    name: Test
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run test suite
+      run: composer run-script test
