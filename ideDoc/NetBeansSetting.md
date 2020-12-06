@@ -96,4 +96,13 @@ Tools -> Pluginから、Settingタブを開き、「NetBenas8.2 Portal」を選�
 
 ## プロジェクトの作成
 参考にするページは[このページ](https://docs.oracle.com/javame/8.3/sdk-dev-guide/setting-development-environment.htm#MESDD120)です。各手順のリンクが集まっています。
-File -> New Project　を選択して、「Java ME Embedded」がない時は
+File -> New Project　を選択して、「Java ME Embedded」がない時は上記の手順を見直してみてください。
+うまくいくと下のように表示されます。
+![JavaMEProject1.png](./img/JavaMEProject1.png)
+
+次へをクリックすると
+![JavaMEProject2.png](./img/JavaMEProject2.png)
+
+なんやらエラーが出ています。調べてみるとJavaME SDKの構成が悪いようです。
+カスタムする必要がありそうです。
+![JavaMEProject3.png](./img/JavaMEProject3.png)
