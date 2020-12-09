@@ -53,9 +53,12 @@ git pull <対象のURL>
   ```
   ![gitCommit](./img/gitCommit.png)
 
-　--amend: コミットした時のコメント内容を修正する
+  --amend: コミットした時のコメント内容を修正する
   ＜コマンドサンプル＞
   ```
   git commit --amend
   ```
   ![ammend](./img/gitCommitAmend.png)
+
+* stash:変更した内容を一時的に退避させるのに使います
+ 
