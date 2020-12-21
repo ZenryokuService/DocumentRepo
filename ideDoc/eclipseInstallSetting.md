@@ -149,6 +149,7 @@ Githubのユーザーとパスワードを入力します。
 ##### Javaのソース配置
 ここまで来たらJavaコードを書きたいのですが、パッケージなどの配置先をどのようにするか？を決めないといけません。
 とりあえず、プロジェクトがJavaプロジェクトになっていないのでMavenプロジェクトに変更し、パッケージ構成を作成します。
+![MavenSrcTree](./img/mavven_src_tree.png)
 
 1. プロジェクトを右クリック
 構成 > Mavenプロジェクトへ変換
@@ -158,6 +159,10 @@ Githubのユーザーとパスワードを入力します。
 
 3. パッケージを作成し、その配下にJavaソースを作成、とりあえずはHello Worldを実行して問題なくJavaを起動できることを確認
 ![Reuslt](./img/ResultHelloWorld.png)
+
+4. testフォルダを作成し、JUnitが起動できることを確認
+pom.xmlファイルでエラーが出る時がある。
+- * [CompilerException: 1.8.0_202は無効なターゲット・リリースです](./errors/MavenErrors.md)
 
 ## Setting Junit
 JUNITの設定を行います、単純にjunit.jarをビルドパスにつなげるだけです。
