@@ -5,6 +5,15 @@
 * [Git 初期化](#git-init)
 * [Git Command](#git-command)
 
+## Git Config
+A． ```Authentication failed for``` がでるとき
+1. コントロールパネル→ユーザーアカウント→資格情報マネージャー→Windows資格情報を開く
+2. Web資格情報を選択
+3. 対象リポジトリのURLをクリックし削除する
+4. 再度クローンする
+5. ユーザー名とパスワードを入力
+
+
 ## Git init
 Git 初期化方法、リポジトリとして使用するディレクトリに移動して下のコマンドを叩きます。
 ラズパイ上で実行してみました。ただし、一度初期化していたので「再初期化」になっています。
@@ -61,4 +70,3 @@ git pull <対象のURL>
   ![ammend](./img/gitCommitAmend.png)
 
 * stash:変更した内容を一時的に退避させるのに使います
- 
