@@ -57,6 +57,8 @@ SourceForgeからダウンロードしたら下のようなファイルが落と
 しかし、文字のサイズが小さいので、文字の大きさを変更します。
 ![](http://zenryokuservice.com/wp/wp-content/uploads/2021/01/robocode-3.png)
 
+![theme1](./img/theme1.png)
+
 ![](http://zenryokuservice.com/wp/wp-content/uploads/2021/01/robocode-9.png)
 
 上のような手順で、サイズを変更します。
