@@ -19,7 +19,7 @@ SourceForgeからダウンロードしたら下のようなファイルが落と
 > robocode-1.9.3.9-setup.jar
 
 このファイルは実行可能JARファイルです。しかし、ダブルクリックで実行できなかったので、自分はコマンドで実行しました。下のようにコマンドを叩きます。
-![](http://zenryokuservice.com/wp/wp-content/uploads/2021/01/無題.png)
+![](./img/setup.png)
 
 ＜実行コマンド＞
 <pre>java -jar robocode-1.9.3.9-setup.jar</pre>
@@ -358,5 +358,60 @@ Bearing: 115.11310156348944
 BearingRadians: 2.009102634465523
 
 
-APIを読んでいて発見したこと
+## APIを読んでいて発見したこと
 1. **turnRight(e.getBearing()) を実行すれば、 ロボットは弾丸が飛んできた方向を向くことになります。**
+
+## 実行可能なメソッド(コマンド)
+
+
+|返り値|メソッド名|振る舞い(処理の内容)|
+| ---- | ------- | ---------------- |
+|void|ahead(double distance)|ロボットを前方に移動させます。|
+|void|back(double distance)|ロボットを後方に移動させます。|
+|void|doNothing()|このロボットの今回の順番では、何も動作を行いません。|
+|void|finalize()|システムによって呼び出され、ロボットのクリーンアップ (終結処理) を行います。|
+|void|fire(double power)|弾丸を発射します。|
+|Bullet|fireBullet(double power)|弾丸を発射します。|
+|double|getBattleFieldHeight()|現在のバトルフィールドの高さを取得します。|
+|double|getBattleFieldWidth()|現在のバトルフィールドの幅を取得します。|
+|double|getEnergy()|ロボットの現在のエネルギーを戻します。|
+|double|getGunCoolingRate()|大砲の冷却速度を戻します。|
+|double|getGunHeading()|大砲の向きを 360 度形式で戻します。|
+|double|getGunHeat()|大砲の現在の熱さを戻します。|
+|double|getHeading()|ロボットの現在の向きを 360 度形式で戻します。|
+|double|getHeight()|ロボットの高さを戻します。|
+|String|getName()|ロボットの名前を戻します。|
+|int|getNumRounds()|現在のバトルのラウンド数を戻します。|
+|int|getOthers()|敵ロボットの残り台数を戻します。|
+|double|getRadarHeading()|レーダーの向きを 360 度形式で戻します。|
+|int|getRoundNum()|現在のラウンドが、 バトルの第何ラウンドかを戻します (1～getNumRounds() の範囲)|
+|long|getTime()|現在のゲーム時刻を戻します。|
+|double|getVelocity()|このロボットの移動速度を戻します。|
+|double|getWidth()|ロボットの幅を戻します。|
+|double|getX()|ロボットの X 座標の位置を戻します。|
+|double|getY()|ロボットの Y 座標の位置を戻します。|
+|void|onBulletHit(BulletHitEvent event)|このロボットが発射したいずれかの弾丸が他のロボットに当たったとき、 このメソッドが呼び出されます。|
+|void|onBulletHitBullet(BulletHitBulletEvent event)|このロボットが発射したいずれかの弾丸が他の弾丸に当たったとき、 このメソッドが呼び出されます。|
+|void|onBulletMissed(BulletMissedEvent event)|このロボットが発射したいずれかの弾丸がはずれたとき (壁に当たったとき)、 このメソッドが呼び出されます。|
+|void|onDeath(DeathEvent event)|このメソッドは、ロボットが死んだときに呼び出されます。 このイベントが通知されるようにするには、 ロボットのコードでこのメソッドをオーバーライドする必要があります。|
+|void|onHitByBullet(HitByBulletEvent event)|このロボットに弾丸が命中したとき、このメソッドが呼び出されます。|
+|void|onHitRobot(HitRobotEvent event)|このロボットが他のいずれかのロボットと衝突したとき、 このメソッドが呼び出されます。|
+|void|onHitWall(HitWallEvent event)|このロボットが壁に衝突したとき、このメソッドが呼び出されます。|
+|void|onRobotDeath(RobotDeathEvent event)|このメソッドは、 他のいずれかのロボットが死んだときに呼び出されます。 このイベントが通知されるようにするには、 ロボットのコードでこのメソッドをオーバーライドする必要があります。|
+|void|onScannedRobot(ScannedRobotEvent event)|このロボットが他のロボットを発見したとき、 このメソッドが呼び出されます。|
+|void|onWin(WinEvent event)|このロボットがバトルに勝ったとき、このメソッドが呼び出されます。|
+|void|resume()|stop() による停止中の動作があれば、その動作を再開します。|
+|void|run()|各ロボットのメイン・メソッド。|
+|void|scan()|他のロボットを探します。|
+|void|setAdjustGunForRobotTurn(boolean newAdjustGunForRobotTurn)|ロボットが回転するときに、 大砲が自動的に逆方向に回転するように設定します。|
+|void|setAdjustRadarForGunTurn(boolean newAdjustRadarForGunTurn)|大砲が回転するときに、 レーダーが自動的に逆方向に回転するように設定します。|
+|void|setAdjustRadarForRobotTurn(boolean newAdjustRadarForRobotTurn)|ロボットが回転するときに、 レーダーが自動的に逆方向に回転するように設定します。|
+|void|setColors(Color robotColor, Color gunColor, Color radarColor)|このメソッドは、ロボットの色を設定するために呼び出します。|
+|void|stop()|動作をすべて停止し、 後で resume() 呼び出しを使って再開できるよう、保存します。|
+|void|stop(boolean overwrite)|動作をすべて停止し、 後で resume() 呼び出しを使って再開できるよう、保存します。|
+|void|turnGunLeft(double degrees)|ロボットの大砲を回転させます。|
+|void|turnGunRight(double degrees)|ロボットの大砲を回転させます。|
+|void|turnLeft(double degrees)|ロボットを回転させます。|
+|void|turnRadarLeft(double degrees)|ロボットのレーダーを回転させます。|
+|void|turnRadarRight(double degrees)|ロボットのレーダーを回転させます。|
+|void|turnRight(double degrees)|ロボットを回転させます。
