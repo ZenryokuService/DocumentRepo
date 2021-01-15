@@ -1,13 +1,12 @@
 ## Robocodeのインストール
-1. [ソースは、ここからダウンロード](http://sourceforge.net/projects/robocode/files/)
+1. [プログラムソースは、ここからダウンロード](http://sourceforge.net/projects/robocode/files/)
    ![ダウンロード](./img/RoboCode1.png)
 
-2. [起動ファイルは、ここからダウンロード](https://sourceforge.net/projects/robocode/files/robocode/1.9.3.9/)
+2. [インストーラーは、ここからダウンロード](https://sourceforge.net/projects/robocode/files/robocode/1.9.3.9/)
 
-3. [Robotクラスのメソッドはこちら](http://www.solar-system.tuis.ac.jp/Java/robocode_api/robocode/Robot.html)
+3. [Robotクラスのメソッドの説明(JavaDoc)はこちら](http://www.solar-system.tuis.ac.jp/Java/robocode_api/robocode/Robot.html)
 
-4. [RobocodeのWiki](https://robowiki.net/wiki/Main_Page)
-
+4. [RobocodeのWiki(英語だけど色々書いている)](https://robowiki.net/wiki/Main_Page)
 
 
 # Robocodeは無料ゲーム
@@ -15,14 +14,14 @@
 
 
 ## インストールについて
-SourceForgeからダウンロードしたら下のようなファイルが落とせます。
+SourceForgeからダウンロードしたら下のようなファイルがダウンロードできます。
 > robocode-1.9.3.9-setup.jar
 
 このファイルは実行可能JARファイルです。しかし、ダブルクリックで実行できなかったので、自分はコマンドで実行しました。下のようにコマンドを叩きます。
 ![](./img/setup.png)
 
 ＜実行コマンド＞
-<pre>java -jar robocode-1.9.3.9-setup.jar</pre>
+* ```java -jar robocode-1.9.3.9-setup.jar```
 
 コマンドの内容としては、下の通りです。
 * javaコマンドでJavaを起動したりできます。
@@ -66,7 +65,8 @@ SourceForgeからダウンロードしたら下のようなファイルが落と
 そして、お待ちかねプログラムコードです。
 
 ### Java Code
-<pre>package jp.zenryoku.robo;
+```java
+package jp.zenryoku.robo;
 import robocode.*;
 //import java.awt.Color;
 
@@ -122,9 +122,11 @@ public class MyFirstProgram extends Robot
 		back(20);
 	}
 }
-</pre>
+```
+
 全体を眺めると、慣れていない人には「なんじゃこりゃー」となるかもしれませんが、一部分のみを見てみましょう。runメソッドです。
-<pre>	/**
+```java
+	/**
 	 * run: MyFirstProgram's default behavior
 	 */
 	public void run() {
@@ -143,11 +145,14 @@ public class MyFirstProgram extends Robot
 			back(100);
 			turnGunRight(360);
 		}
-	}</pre>
+	}
+```
+
 そして、コメントを見てみます、英語です。。。
 
 こんな時はGoogle翻訳で訳しましょう。
-<pre>run: MyFirstProgram's default behavior</pre>
+* ```run: MyFirstProgram's default behavior```
+
 ![](http://zenryokuservice.com/wp/wp-content/uploads/2021/01/robocode-10.png)
 
 この様に、分解してみていけば、ある程度は何とかなります。
@@ -238,7 +243,8 @@ Positive y is up.
 ## コードを変更して動かす
 自動生成されたコードで動かした場合は、すでに確認したので、次は自分で修正したコードで動かしてみようと思います。
 
-<pre>	public void run() {
+```java
+public void run() {
 		// Initialization of the robot should be put here
 
 		// After trying out your robot, try uncommenting the import at the top,
@@ -254,16 +260,16 @@ Positive y is up.
 			back(100);
 			turnGunRight(360);
 		}
-	}</pre>
+	}```
 このコードは、デフォルトの動きを設定しています。なので、この動きを変えてみようと思います。
-<pre>// Robot main loop
+```// Robot main loop
 while(true) {
 	// Replace the next 4 lines with any behavior you would like
 	ahead(1000);
 	turnGunRight(90);
 	back(500);
 	turnGunRight(90);
-}</pre>
+}```
 1. aheadの引数を100から1000に修正
 2. turnGunRightの引数を360から90に修正
 3. backも同様に500に修正
@@ -283,13 +289,15 @@ while(true) {
 コメントを頼りにします。
 
 修正するコードは下のものです。
-<pre>/**
+
+```java
+/**
  * onHitWall: What to do when you hit a wall
  */
 public void onHitWall(HitWallEvent e) {
 	// Replace the next line with any behavior you would like
 	back(20);
-}</pre>
+}```
 
 コードを言葉にすると「壁にぶつかったとき(onHitWall())、20下がる(back(20))」とあるので、向きを変える方向で、修正したいと思います。
 
@@ -297,13 +305,13 @@ public void onHitWall(HitWallEvent e) {
 次のようなメソッドがあったので、早速実装します。
 ![](http://zenryokuservice.com/wp/wp-content/uploads/2021/01/robocode-14.png)
 
-<pre>/**
+```/**
  * onHitWall: What to do when you hit a wall
  */
 public void onHitWall(HitWallEvent e) {
 	// Replace the next line with any behavior you would like
 	turnRight(90);
-}</pre>
+}```
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aHQKzzF36w0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -323,28 +331,28 @@ public void onHitWall(HitWallEvent e) {
 [ScannedRobotEvent](https://robocode.sourceforge.io/docs/robocode/robocode/ScannedRobotEvent.html)
 
 ＜使用できるメソッド例＞
-<pre>out.println("Bearing: " + e.getBearing());
+```out.println("Bearing: " + e.getBearing());
 out.println("Distance: " + e.getDistance());
-out.println("Energy: " + e.getEnergy());</pre>
+out.println("Energy: " + e.getEnergy());```
 
 ### 弾に当たったとき
 ＜引数にあるクラス(Event)＞
 [HitByBulletEvent](https://robocode.sourceforge.io/docs/robocode/robocode/HitByBulletEvent.html)
 
 ＜使用できるメソッド例＞
-<pre>out.println("Bearing: " + e.getBearing());
+```out.println("Bearing: " + e.getBearing());
 out.println("Bearing#power: " + e.getBullet().getPower());
 out.println("Heading: " + e.getHeading());
-</pre>
+```
 
 ### 壁に当たったとき
 ＜引数にあるクラス(Event)＞
 [HitWallEvent](https://robocode.sourceforge.io/docs/robocode/robocode/HitWallEvent.html)
 
 ＜使用できるメソッド例＞
-<pre>out.println("Bearing: " + e.getBearing());
+```out.println("Bearing: " + e.getBearing());
 out.println("BearingRadians: " + e.getBearingRadians());
-</pre>
+```
 
 ＜出力内容(一部抜粋)＞
 > *** onScannedRobot ***
