@@ -70,3 +70,8 @@ git pull <対象のURL>
   ![ammend](./img/gitCommitAmend.png)
 
 * stash:変更した内容を一時的に退避させるのに使います
+
+* remote: リモートリポジトリの情報を取得したり詳細は以下
+ * git remote -v: 接続先のURLを表示する
+ * git remote show origin -n: 同上
+   * git remote show --help: ヘルプ表示 
