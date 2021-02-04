@@ -51,3 +51,35 @@
 
 
 ## フォームの作成方法
+課題の作成
+1. +作成 -> 課題をクリック
+ ![Kadai](./img/googleClassroom/selectKadai.png)
+
+ ![InputForm2](./img/googleClassroom/addQuestion.png) **質問の追加**
+
+
+2. 入力内容を書く
+ ![InputKadai](./img/googleClassroom/InputKadai.png)
+
+3. Formを選択する
+ ![SelectForm](./img/googleClassroom/selectForm.png)
+
+4. Formの内容を記述する
+ ![InputForm](./img/googleClassroom/InputForm.png)
+
+5. 問題と選択肢の作成
+ ![InputForm1](./img/googleClassroom/createFormButton1.png)
+
+
+6. 入力が終わったら、保存されているので元画面に戻る
+ ![KadaiTop](./img/googleClassroom/KadaiTop1.png)
+
+7. 課題の策区政をクリック
+　![KadaiTop](./img/googleClassroom/KadaiTop2.png)
+
+
+作成後
+ ![result](./img/googleClassroom/result1.png)
+
+
+ ![result](./img/googleClassroom/result.png)
