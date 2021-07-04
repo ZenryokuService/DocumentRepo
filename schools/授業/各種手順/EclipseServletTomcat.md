@@ -20,7 +20,7 @@ Tomcatを使用して、HttpServletを使用した少しだけ低レベルなサ
 ![新規プロジェクト作成2](./img/newProjectForWeb3.png)
 
 2. 作成したプロジェクトにフォルダーを追加します。
-「classesフォルダ」を作成すし以下のようにビルドパスに追加する
+「classesフォルダ」を作成し以下のようにビルドパスに追加する
 ![新規プロジェクト作成3](./img/newProjectForWeb4.png)
 
 ![新規プロジェクト作成4](./img/newProjectForWeb5.png)
@@ -39,3 +39,46 @@ Tomcatを使用して、HttpServletを使用した少しだけ低レベルなサ
 
 7. 作成したサーブレットが動くことを確認。
 ![新規プロジェクト作成9](./img/newProjectForWeb9.png)
+
+```java
+public class HelloServlet extends HttpServlet {
+
+	/** GETリクエスト */
+	@Override
+	protected void doGet(HttpServletRequest request
+			, HttpServletResponse response) throws ServletException, IOException {
+		String message = "Hello World";
+		String uri = request.getRequestURI();
+		System.out.println(getServletContext().getRealPath("/"));
+
+
+		StringBuilder bb = new StringBuilder();
+		bb.append("<html>");
+		bb.append("<head>");
+		bb.append("<title>ハローサーブレット</title>");
+		bb.append("</head>");
+		bb.append("<body>");
+		bb.append("DBから取得したデータ</br>");
+
+		// 占いの結果
+		String[] keka = new String[] {"長スッキリ", "スッキリ", "最悪 "};
+		int idx = (int)(Math.random() * 3);
+		bb.append(keka[idx]);
+		bb.append("</body>");
+		bb.append("</html>");
+
+    // レスポンスの返却
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		out.append(bb.toString());
+	}
+
+	/** POSTリクエスト */
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+}
+```
