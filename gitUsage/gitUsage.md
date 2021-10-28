@@ -1,9 +1,14 @@
 ## Introduction
-前提として、Gitをインストールしてリモート・リポジトリに接続した状態での実行を想定しています。
+リポジトリを使用して作成した資源(ドキュメントやソース)を管理します。
+
+そのリポジトリとして有名な**Git**を使用します。
+
+[このURLからGitインストーラーをダウンロード](https://gitforwindows.org/)してインストールしてください。
 
 ## Index
-* [Git 初期化](#git-init)
-* [Git Command](#git-command)
+* [Git Command](#git-command): エラーが出た場合
+* [Git Init](#git-init): Gitリポジトリの用意
+* [Git pull](#git-pull): リモートリポジトリからソースを取得する
 
 ## Git Config
 A． ```Authentication failed for``` がでるとき
@@ -74,4 +79,4 @@ git pull <対象のURL>
 * remote: リモートリポジトリの情報を取得したり詳細は以下
  * git remote -v: 接続先のURLを表示する
  * git remote show origin -n: 同上
-   * git remote show --help: ヘルプ表示 
+   * git remote show --help: ヘルプ表示
