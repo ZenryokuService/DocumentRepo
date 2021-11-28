@@ -1,5 +1,4 @@
 # Java版 テキストRPGを作る
-* [執筆先](https://github.com/Techpit-Contents/java-dragon-quest)
 * [書き方のサンプル](https://github.com/Techpit-Contents/techpitgram3/blob/master/customize/0%E7%AB%A0%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB/0-1%20Instagram%E9%A2%A8%E7%B0%A1%E6%98%93SNS%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%82%AB%E3%82%B9%E3%83%9E%E3%82%A4%E3%82%BA%E3%81%97%E3%82%88%E3%81%86.md)
 ## まずは基本の学習
 ### じゃんけんゲームを作ってみよう
