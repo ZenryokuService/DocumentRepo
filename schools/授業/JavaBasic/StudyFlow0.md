@@ -24,21 +24,21 @@ Iotや、人工知能の分野にも使用することができます。
    <iframe width="560" height="315" src="https://www.youtube.com/embed/DLngS77atps" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 実際に動かす。
-上に挙げたような、大規模システムの構築は出来ないのでサンプルとして作成したTextRpgゲーム」をみながら理解していきます。
+上に挙げたような、大規模システムの構築は出来ないので**サンプルとして作成したTextRpgゲーム」を見ながら理解**していきます。
 
 ### ゲームの特徴
 * ゲームブックのように、ストーリーを進めていき、最終的にゴール(エンディング)を迎える形のゲームが作れます。
 * ストーリーは「Stroy.txt」に指定の形で記述することで、作成者が自由にストーリーを作成することができます。
 * Job.xml, Monster.xml, Command.xmlなどのXMLファイルで使用する職業、コマンド、モンスターを定義することができます。
 
-### サンプルについて
-TextRpgフォルダの中に「game」と「sample」というフォルダがあります。
+### ダウンロードファイル(textRpg.zip)について
+TextRpgフォルダの中に「game」と「sample」というフォルダがあります。他にも、JavaDocとUMLのドキュメントもあります。
 そして、  ObjectOrientedPrograming.jarファイルがあります。
-![フォルダ構成](./img/TextRpgDirectory1.png)
+![フォルダ構成](./img/TextRpgDirectory.png)
 
 ＜動かし方＞
-1. コマンドプロンプトを開く：![WinBut](./img/winButton.png) ウィンドウズボタン + R を押下、「cmd」と入力してEnterキー
-![AppRun](./img/AppRunWiz.png)
+1. コマンドプロンプトを開く：<img src="http://zenryokuservice.com/wp/wp-content/uploads/2022/03/winButton.png" width="24px"> ウィンドウズボタン</img> + R を押下、「cmd」と入力してEnterキー
+![](http://zenryokuservice.com/wp/wp-content/uploads/2022/03/AppRunWiz.png)
 
 2. カレントディレクトリを移動して、TextRpgフォルダに移動する。
 
